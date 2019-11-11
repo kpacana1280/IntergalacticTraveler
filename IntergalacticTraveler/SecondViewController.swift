@@ -11,21 +11,14 @@ import UIKit
 class SecondViewController: UIViewController {
 
     @IBOutlet weak var starImageView: UIImageView!
+    var StarColor: String!
     override func viewDidLoad() {
         super.viewDidLoad()
+        let randomNumber = Int.random(in: 1...3)
+        let myImage = UIImage(named: "\(StarColor)\(randomNumber)")
+        
+        starImageView.image = myImage
 
-        // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
