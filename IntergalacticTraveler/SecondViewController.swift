@@ -11,12 +11,12 @@ import UIKit
 class SecondViewController: UIViewController {
 
     @IBOutlet weak var starImageView: UIImageView!
-    var StarColor: String!
+    var StarColor: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         let randomNumber = Int.random(in: 1...3)
         let myImage = UIImage(named: "\(StarColor)\(randomNumber)")
-        
+        print("\(StarColor)\(randomNumber)")
         starImageView.image = myImage
 
     }
